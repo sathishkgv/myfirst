@@ -58,6 +58,7 @@
           g.setFormatArr('Day', 'Week', 'Month', 'Quarter');
           g.setEditable(1);
           g.setResources( [{ id: 1, name: 'Mario' } , { id: 2, name: 'Henrique' }]);
+          g.setEventsChange(function(ev){console.log(ev)});
            // Even with setUseSingleCell using Hour format on such a large chart can cause issues in some browsers
           // Parameters                     (pID, pName,                  pStart,       pEnd,        pStyle,         pLink (unused)  pMile, pRes,       pComp, pGroup, pParent, pOpen, pDepend, pCaption, pNotes, pGantt)
           g.AddTaskItem(new JSGantt.TaskItem(1, 'Define Chart API', '', '', 'ggroupblack', '', 0, 'Brian', 0, 1, 0, 1, '', '', 'Some Notes text', g));
